@@ -49,7 +49,7 @@ ul:hover {
     margin: 0 5px 10px 0;
 }
 
-.header_container {
+.header_container a {
     text-decoration: none;
     color: black;
 }
@@ -100,4 +100,123 @@ ul:hover {
 
 .main_input::placeholder {
     color: whitesmoke;
+}
+
+.title {
+    color: black;
+    margin-left: 20px;
+}
+
+.carusel {
+    width: 100%;
+    /*Se crea una crea una barra de navegacion*/
+    overflow: scroll;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.carusel::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.carusel::-webkit-scrollbar-thumb {
+    background-color: #417939;
+    border-radius: 15px;
+    border: solid 2px #417939;
+}
+
+.carusel_container {
+    white-space: nowrap;
+    width: auto;
+    margin: 50px 0 50px 10px;
+    top: 200px;
+}
+
+.carusel--item {
+    width: 200px;
+    height: 250px;
+    background: blue;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+    /* transition: 450ms;
+    transform-origin: left;*/
+}
+
+.carusel--item:hover~.carusel--item {
+    transform: translate3d(100px, 0, 0);
+}
+
+.carusel_container:hover .carusel--item {
+    opacity: 0.3;
+}
+
+.carusel_container:hover .carusel--item:hover {
+    opacity: 1;
+    transform: scale(1.35);
+}
+
+.carusel--item img {
+    width: 200px;
+    height: 250px;
+}
+
+.carusel--item-detail {
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: absolute;
+    color: #E7BD5E;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 1.5));
+}
+
+.carusel--item-detail:hover {
+    opacity: 1;
+}
+
+.carusel--item-detail img {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.carusel--item-detail h4 .carusel--item-detail p {
+    margin: 0 0 3px 5px;
+    padding: 0;
+}
+
+.footer {
+    height: 10vh;
+    width: 10%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer a {
+    text-decoration: none;
+    padding: 10px 0 15px 0;
+    color: #8EBF6C;
+}
+
+@media only screen and (min-width: 500px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 10px 0;
+    }
 }
