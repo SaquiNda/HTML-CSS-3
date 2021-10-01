@@ -6,8 +6,6 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {}
-
 .header_container {
     margin-right: 25px;
     display: flex;
@@ -27,6 +25,8 @@ header {}
     display: flex;
     flex-direction: row;
     margin-right: 25px;
+    position: relative;
+    left: -50px;
 }
 
 .header_container ul {
@@ -37,7 +37,8 @@ header {}
     margin: 0 0 0 -24px;
     width: 120px;
     position: absolute;
-    text-align: ri;
+    text-align: right;
+    top: 50px;
 }
 
 .header_container:hover ul,
